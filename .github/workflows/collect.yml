@@ -29,9 +29,39 @@ jobs:
       - name: Install dependencies
         run: python -m pip install requests
 
+      - name: Check API connection
+        shell: bash
+        run: |
+          URL="https://opendata.banskabystrica.sk/api/datasets/v1/public-transport/stops/list"
+
+          echo "=== Звичайне підключення ==="
+          curl -sS -v \
+            --connect-timeout 15 \
+            --max-time 30 \
+            -H "Content-Type: application/json" \
+            --data '{}' \
+            --output /dev/null \
+            --write-out '\nHTTP: %{http_code}, IP: %{remote_ip}\n' \
+            "$URL" || true
+
+          echo "=== Тільки IPv4 ==="
+          curl -4 -sS -v \
+            --connect-timeout 15 \
+            --max-time 30 \
+            -H "Content-Type: application/json" \
+            --data '{}' \
+            --output /dev/null \
+            --write-out '\nHTTP: %{http_code}, IP: %{remote_ip}\n' \
+            "$URL" || true
+
       - name: Collect and verify data
         shell: bash
         run: |
+          if [ ! -s collect_once.py ]; then
+            echo "::error::collect_once.py відсутній або порожній"
+            exit 1
+          fi
+
           python -u collect_once.py
 
           if [ ! -f data/departures.json ]; then
@@ -44,6 +74,7 @@ jobs:
           fi
 
           python -c 'import json; from pathlib import Path; p = Path("data/departures.json"); data = json.loads(p.read_text(encoding="utf-8")); print(f"Файл JSON перевірено. Записів: {len(data)}")'
+
           ls -lh data/departures.json
 
       - name: Commit data
