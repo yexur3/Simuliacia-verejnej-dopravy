@@ -10,20 +10,53 @@ permissions:
 
 concurrency:
   group: collector
+  cancel-in-progress: false
 
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests
-      - run: python collect_once.py
+
+      - name: Install dependencies
+        run: python -m pip install requests
+
+      - name: Collect and verify data
+        shell: bash
+        run: |
+          python -u collect_once.py
+
+          if [ ! -f data/departures.json ]; then
+            echo "::error::collect_once.py завершився, але data/departures.json не створено"
+            echo "Робоча папка:"
+            pwd
+            echo "Розмір скрипта:"
+            wc -c collect_once.py
+            exit 1
+          fi
+
+          python -c 'import json; from pathlib import Path; p = Path("data/departures.json"); data = json.loads(p.read_text(encoding="utf-8")); print(f"Файл JSON перевірено. Записів: {len(data)}")'
+          ls -lh data/departures.json
+
       - name: Commit data
+        shell: bash
         run: |
           git config user.name "collector-bot"
           git config user.email "collector-bot@users.noreply.github.com"
+
           git add data/departures.json
-          git diff --staged --quiet || (git commit -m "data: update" && git push)
+
+          if git diff --staged --quiet; then
+            echo "Нових змін немає."
+          else
+            git commit -m "data: update departures"
+            git push
+          fi
