@@ -1,0 +1,1472 @@
+[
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Rooseveltova nemocnica a späť",
+    "routeId": "910009139",
+    "shortName": "1",
+    "vehicleType": "Trolleybus",
+    "validFrom": "2026-02-25T10:27:50.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Bellušova-Viestova-Železničná stanica-Cesta k nemocnici-Námestie Š.Moysesa",
+    "routeId": "910009141",
+    "shortName": "100",
+    "vehicleType": "Bus",
+    "validFrom": "2026-02-05T12:04:50.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Železničná stanica a späť",
+    "routeId": "910009148",
+    "shortName": "2",
+    "vehicleType": "Trolleybus",
+    "validFrom": "2026-02-26T03:43:26.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Parkovisko Mičinská-Autobusová stanica-Námestie slobody-Karpatská-Rudohorská dolná-Námestie slobody-",
+    "routeId": "910009149",
+    "shortName": "20",
+    "vehicleType": "Bus",
+    "validFrom": "2026-02-26T03:50:11.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Pieninská - Námestie slobody -  Rakytovce ihrisko a späť",
+    "routeId": "910009150",
+    "shortName": "21",
+    "vehicleType": "Bus",
+    "validFrom": "2026-01-05T05:40:51.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Pieninská - Námestie slobody - Zvolenská cesta, juh a späť",
+    "routeId": "910009151",
+    "shortName": "22",
+    "vehicleType": "Bus",
+    "validFrom": "2026-01-05T05:06:40.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Pieninská - Námestie slobody - Autobusová stanica- Majerská cesta a späť",
+    "routeId": "910009152",
+    "shortName": "23",
+    "vehicleType": "Bus",
+    "validFrom": "2026-02-10T10:53:07.000Z",
+    "validTo": "2026-09-24T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Mládežnícka, otočka - Strieborné námestie - Starohorská, otočka a späť",
+    "routeId": "910009153",
+    "shortName": "24",
+    "vehicleType": "Bus",
+    "validFrom": "2026-01-07T04:37:42.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Rooseveltova nemocnica - Strieborné námestie - Starohorská, otočka a späť",
+    "routeId": "910009183",
+    "shortName": "25",
+    "vehicleType": "Bus",
+    "validFrom": "2026-05-11T10:38:55.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Internátna - Námestie slobody - Partizánska cesta - Starohorská, rázcestie - Rudohorská, dolná - Par",
+    "routeId": "910009155",
+    "shortName": "26",
+    "vehicleType": "Bus",
+    "validFrom": "2026-01-14T10:19:43.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Gaštanová - Strieborné námestie - Starohorská, otočka a späť",
+    "routeId": "910009184",
+    "shortName": "27",
+    "vehicleType": "Bus",
+    "validFrom": "2026-05-11T11:11:30.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Autobusová stanica - Námestie slobody - Partizánska cesta - Starohorská, rázcestie - Rudohorská, dol",
+    "routeId": "910009157",
+    "shortName": "28",
+    "vehicleType": "Bus",
+    "validFrom": "2026-01-14T09:58:08.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Parkovisko Mičinská - Železničná stanica - Námestie slobody - Stará Sásová - Karpatská\r\n - Rudohorsk",
+    "routeId": "910009158",
+    "shortName": "29",
+    "vehicleType": "Bus",
+    "validFrom": "2026-02-26T04:59:39.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Rooseveltova nemocnica a späť",
+    "routeId": "910009159",
+    "shortName": "3",
+    "vehicleType": "Trolleybus",
+    "validFrom": "2026-02-25T14:45:07.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Podlavice, Gaštanová - Kyjevské námestie - Zvolenská cesta - Iliaš pri moste a späť",
+    "routeId": "910009161",
+    "shortName": "32",
+    "vehicleType": "Bus",
+    "validFrom": "2026-02-26T04:18:28.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "THK otočka - H.Vajanského - Strieborné námestie - Jesenský vršok - Námestie slobody - Železničná sta",
+    "routeId": "910009162",
+    "shortName": "33",
+    "vehicleType": "Bus",
+    "validFrom": "2026-02-26T03:46:41.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Námestie slobody - EUROPA SC - Gaštanová a späť",
+    "routeId": "910009163",
+    "shortName": "34",
+    "vehicleType": "Bus",
+    "validFrom": "2026-01-14T13:36:17.000Z",
+    "validTo": "2026-09-24T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Námestie slobody - Jesenský vršok - Strieborné námestie - Skubín,otočka a späť",
+    "routeId": "910009185",
+    "shortName": "35",
+    "vehicleType": "Bus",
+    "validFrom": "2026-05-11T10:47:40.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Námestie slobody - Jesenský vršok - Strieborné námestie - Mlynská, otočka a spä",
+    "routeId": "910009186",
+    "shortName": "36",
+    "vehicleType": "Bus",
+    "validFrom": "2026-05-11T10:42:06.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket - Železničná stanica a späť",
+    "routeId": "910009167",
+    "shortName": "4",
+    "vehicleType": "Trolleybus",
+    "validFrom": "2026-02-26T07:19:26.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Senica, otočka - Námestie slobody - Zvolenská cesta - Iliaš II. a späť",
+    "routeId": "910009168",
+    "shortName": "41",
+    "vehicleType": "Bus",
+    "validFrom": "2026-01-14T06:09:20.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Majer, otočka - Námestie slobody - Šalková, otočka a späť",
+    "routeId": "910009187",
+    "shortName": "42",
+    "vehicleType": "Bus",
+    "validFrom": "2026-04-23T12:36:23.000Z",
+    "validTo": "2026-09-24T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Srnková - Železničná stanica - Námestie slobody - Jesenský vršok - Uľanka, otočka a späť",
+    "routeId": "910009170",
+    "shortName": "43",
+    "vehicleType": "Bus",
+    "validFrom": "2026-02-26T03:53:24.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket - Rooseveltova nemocnica a späť",
+    "routeId": "910009172",
+    "shortName": "5",
+    "vehicleType": "Trolleybus",
+    "validFrom": "2026-02-19T14:02:59.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica  - Tulská a späť",
+    "routeId": "910009174",
+    "shortName": "6",
+    "vehicleType": "Trolleybus",
+    "validFrom": "2026-02-26T03:34:08.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Internátna a späť",
+    "routeId": "910009176",
+    "shortName": "7",
+    "vehicleType": "Trolleybus",
+    "validFrom": "2026-02-26T03:51:49.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Tulská a späť",
+    "routeId": "910009178",
+    "shortName": "8",
+    "vehicleType": "Trolleybus",
+    "validFrom": "2026-02-26T04:22:04.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Viestova - Železničná stanica - Ďumbierska ZŠ - Stará Sásová - Strieborné námestie - Rooseveltova ne",
+    "routeId": "910009188",
+    "shortName": "80",
+    "vehicleType": "Bus",
+    "validFrom": "2026-05-11T11:29:59.000Z",
+    "validTo": "2026-09-24T22:00:00.000Z"
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Pieninská - Karpatská - Strieborné námestie - Krematórium a späť",
+    "routeId": "910009181",
+    "shortName": "90",
+    "vehicleType": "Bus",
+    "validFrom": "2026-01-14T05:27:17.000Z",
+    "validTo": null
+  },
+  {
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Žel. stanica - Nám. slobody - Autobusová stanica - Kyjevské nám. - Sládkovičova - Pršianska terasa,",
+    "routeId": "910009182",
+    "shortName": "97",
+    "vehicleType": "Bus",
+    "validFrom": "2026-02-26T04:50:06.000Z",
+    "validTo": "2026-09-27T22:00:00.000Z"
+  },
+  {
+    "routeId": "910008994",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Rooseveltova nemocnica a späť",
+    "shortName": "1",
+    "validFrom": "2024-04-25T12:33:55.000Z",
+    "validTo": "2024-12-28T21:23:58.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910008996",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Železničná stanica a späť",
+    "shortName": "2",
+    "validFrom": "2024-04-29T05:14:37.000Z",
+    "validTo": "2024-12-28T21:20:30.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910008997",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Park.Mičinská - Autobusová stanica-Námestie slobody - Karpatská",
+    "shortName": "20",
+    "validFrom": "2024-04-29T13:43:47.000Z",
+    "validTo": "2024-12-28T20:47:39.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910008998",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Pieninská - Námestie slobody -  Rakytovce ihrisko a späť",
+    "shortName": "21",
+    "validFrom": "2024-04-29T13:42:26.000Z",
+    "validTo": "2024-12-28T21:22:48.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910008999",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Pieninská - Námestie slobody - Krematórium a späť",
+    "shortName": "22",
+    "validFrom": "2024-04-29T13:42:31.000Z",
+    "validTo": "2024-12-28T21:43:17.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009000",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Pieninská - Nám.Slobody - Autobusová stanica- Majer, Paneláreň a späť",
+    "shortName": "23",
+    "validFrom": "2024-04-29T11:21:29.000Z",
+    "validTo": "2024-12-27T16:53:44.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009001",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Mládežnícka, otočka - Strieborné nám. - Starohorská otočka a späť",
+    "shortName": "24",
+    "validFrom": "2024-04-29T13:41:30.000Z",
+    "validTo": "2024-12-28T21:41:52.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009002",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Rooseveltova nem. - Strieborné nám. - Starohorská, otočka a späť",
+    "shortName": "25",
+    "validFrom": "2024-04-29T13:42:34.000Z",
+    "validTo": "2024-12-28T18:43:03.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009003",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Internátna - Námestie slobody - Partizánska cesta - Starohorská rázc.",
+    "shortName": "26",
+    "validFrom": "2024-04-29T13:41:59.000Z",
+    "validTo": "2024-12-28T22:22:15.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009004",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Gaštanová - Strieborné nám. - Starohorská, otočka a späť",
+    "shortName": "27",
+    "validFrom": "2024-04-29T13:41:25.000Z",
+    "validTo": "2024-12-28T21:57:53.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009005",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Park.Mičinská - Nám.slobody - Partizánska cesta - Starohorská rázc.",
+    "shortName": "28",
+    "validFrom": "2024-04-29T13:41:31.000Z",
+    "validTo": "2024-12-28T21:18:01.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009006",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Nám.Slobody - Stará Sásová - Karpatská",
+    "shortName": "29",
+    "validFrom": "2024-04-29T17:29:11.000Z",
+    "validTo": "2024-12-28T17:48:08.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009007",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Rooseveltova nemocnica a späť",
+    "shortName": "3",
+    "validFrom": "2024-03-13T10:56:24.000Z",
+    "validTo": "2024-12-28T22:25:09.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009008",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Podlavice, Gaštanová -Kyjevské nám. - Zvolenská cesta - Iliaš pri moste a späť",
+    "shortName": "32",
+    "validFrom": "2024-04-29T13:43:17.000Z",
+    "validTo": "2024-12-27T16:26:13.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009009",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "THK otočka - H.Vajanského-Strieborné nám.-Jesenský vršok-Nám.slobody - Žel.stanica-Senica a späť",
+    "shortName": "33",
+    "validFrom": "2024-04-29T13:43:32.000Z",
+    "validTo": "2024-12-28T20:27:57.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009010",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Námestie slobody - Podlavice, Gaštanová a späť",
+    "shortName": "34",
+    "validFrom": "2024-04-29T13:41:38.000Z",
+    "validTo": "2024-12-28T21:38:35.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009011",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Námestie slobody - Jesenský vršok - Strieborné nám. - Skubín, otočka a späť",
+    "shortName": "35",
+    "validFrom": "2024-04-29T13:41:55.000Z",
+    "validTo": "2024-12-28T20:52:02.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009012",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Námestie slobody - Jesenský vršok - Strieborné nám. - Mlynská, otočka a späť",
+    "shortName": "36",
+    "validFrom": "2024-04-29T13:51:45.000Z",
+    "validTo": "2024-12-28T20:04:42.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009013",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "TESCO hypermarket - Železničná stanica a späť",
+    "shortName": "4",
+    "validFrom": "2024-04-29T12:45:15.000Z",
+    "validTo": "2024-12-28T21:05:26.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009014",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Senica, otočka - Námestie slobody - Zvolenská cesta - Iliaš II. a späť",
+    "shortName": "41",
+    "validFrom": "2024-04-29T13:42:40.000Z",
+    "validTo": "2024-12-27T21:52:50.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009015",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Majer, otočka - Námestie slobody - Šalková, otočka a späť",
+    "shortName": "42",
+    "validFrom": "2024-04-29T15:26:11.000Z",
+    "validTo": "2024-12-28T16:45:39.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009016",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Srnková - Žel.stanica - Námestie slobody - Jesenský vršok - Uľanka, otočka a späť",
+    "shortName": "43",
+    "validFrom": "2024-04-29T13:43:08.000Z",
+    "validTo": "2024-12-28T19:23:36.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009017",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica  - Tulská a späť",
+    "shortName": "6",
+    "validFrom": "2024-04-29T03:20:36.000Z",
+    "validTo": "2024-12-28T22:05:28.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009018",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Internátna a späť",
+    "shortName": "7",
+    "validFrom": "2024-04-29T05:20:35.000Z",
+    "validTo": "2024-12-28T21:29:08.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009019",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Železničná stanica - Tulská a späť",
+    "shortName": "8",
+    "validFrom": "2024-04-29T05:01:32.000Z",
+    "validTo": "2024-12-27T17:12:37.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009020",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Viestova - Žel.stanica - Ďumbierska ŠZŠ - Strieborné nám. - Rooseveltova nem. a späť",
+    "shortName": "80",
+    "validFrom": "2024-04-29T13:46:46.000Z",
+    "validTo": "2024-12-27T17:13:15.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009021",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Pieninská - Karpatská - Strieborné nám. - Krematórium a späť",
+    "shortName": "90",
+    "validFrom": "2024-04-29T13:46:13.000Z",
+    "validTo": "2024-12-27T16:23:37.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009022",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Orange - Námestie slobody - Okružná - Pršianska terasa Mosadzná",
+    "shortName": "97",
+    "validFrom": "2024-04-29T13:45:49.000Z",
+    "validTo": "2024-12-28T09:35:08.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009023",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "TESCO hypermarket - Rooseveltova nem. a späť",
+    "shortName": "5",
+    "validFrom": "2024-04-29T08:44:11.000Z",
+    "validTo": "2024-12-28T20:43:27.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009067",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Viestova - Par.Mičinská.Kazačok - Žel.Stanica - Rudlovská cesta - Nám.Š.Moysesa",
+    "shortName": "100",
+    "validFrom": "2025-07-09T04:47:37.000Z",
+    "validTo": "2025-11-25T15:29:34.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009068",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Park.Mičinská - Autobusová stanica-Námestie slobody - Karpatská",
+    "shortName": "20",
+    "validFrom": "2025-02-12T11:30:19.000Z",
+    "validTo": "2026-02-20T12:36:43.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009069",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Pieninská - Námestie slobody -  Rakytovce ihrisko a späť",
+    "shortName": "21",
+    "validFrom": "2025-02-11T23:00:00.000Z",
+    "validTo": "2026-02-20T12:36:37.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009070",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Pieninská - Námestie slobody - Krematórium a späť",
+    "shortName": "22",
+    "validFrom": "2025-02-12T09:08:28.000Z",
+    "validTo": "2026-02-20T12:36:41.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009071",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Pieninská - Nám.Slobody - Autobusová stanica- Majer,Paneláreň a späť",
+    "shortName": "23",
+    "validFrom": "2025-01-22T09:37:06.000Z",
+    "validTo": "2026-02-20T12:35:34.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009072",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Mládežnícka,otočka - Strieborné nám. - Starohorská otočka a späť",
+    "shortName": "24",
+    "validFrom": "2025-02-12T11:15:11.000Z",
+    "validTo": "2026-02-20T12:36:57.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009073",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Rooseveltova nem. - Strieborné nám. - Starohorská,otočka a späť",
+    "shortName": "25",
+    "validFrom": "2025-02-12T11:15:00.000Z",
+    "validTo": "2026-02-20T12:36:38.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009074",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Internátna - Námestie slobody - Partizánska cesta - Starohorská rázc.",
+    "shortName": "26",
+    "validFrom": "2025-02-12T11:16:48.000Z",
+    "validTo": "2026-02-20T12:36:16.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009075",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Gaštanová - Strieborné nám. - Starohorská,otočka a späť",
+    "shortName": "27",
+    "validFrom": "2025-02-12T12:10:19.000Z",
+    "validTo": "2026-02-20T12:35:35.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009076",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Park.Mičinská - Nám.slobody - Partizánska cesta - Starohorská rázc.",
+    "shortName": "28",
+    "validFrom": "2025-02-12T11:29:31.000Z",
+    "validTo": "2026-02-20T12:36:00.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009077",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Nám.Slobody - Stará Sásová - Karpatská",
+    "shortName": "29",
+    "validFrom": "2025-02-12T18:27:28.000Z",
+    "validTo": "2026-02-19T18:35:10.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009078",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Podlavice,Gaštanová -Kyjevské nám. - Zvolenská cesta - Iliaš pri moste a späť",
+    "shortName": "32",
+    "validFrom": "2025-02-12T12:08:21.000Z",
+    "validTo": "2026-02-20T12:23:50.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009079",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "THK otočka - H.Vajanského-Strieborné nám.-Jesenský vršok-Nám.slobody - Žel.stanica-Senica a späť",
+    "shortName": "33",
+    "validFrom": "2025-02-12T11:16:01.000Z",
+    "validTo": "2025-05-21T19:36:58.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009080",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Námestie slobody - Podlavice,Gaštanová a späť",
+    "shortName": "34",
+    "validFrom": "2025-02-11T23:00:00.000Z",
+    "validTo": "2026-02-20T12:34:40.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009081",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Námestie slobody - Jesenský vršok - Strieborné nám. - Skubín,otočka a späť",
+    "shortName": "35",
+    "validFrom": "2025-02-12T11:18:54.000Z",
+    "validTo": "2026-02-20T12:36:13.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009082",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Námestie slobody - Jesenský vršok - Strieborné nám. - Mlynská,otočka a späť",
+    "shortName": "36",
+    "validFrom": "2025-02-12T11:18:16.000Z",
+    "validTo": "2026-02-20T12:36:21.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009083",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Senica, otočka - Námestie slobody - Zvolenská cesta - Iliaš II. a späť",
+    "shortName": "41",
+    "validFrom": "2025-02-12T11:48:09.000Z",
+    "validTo": "2025-05-21T20:52:40.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009084",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Majer, otočka - Námestie slobody - Šalková, otočka a späť",
+    "shortName": "42",
+    "validFrom": "2025-02-12T11:19:57.000Z",
+    "validTo": "2025-05-21T19:32:47.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009085",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Srnková - Žel.stanica - Námestie slobody - Jesenský vršok - Uľanka,otočka a späť",
+    "shortName": "43",
+    "validFrom": "2025-02-12T11:18:26.000Z",
+    "validTo": "2026-02-20T12:35:33.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009086",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Viestova - Žel.stanica - Ďumbierska ŠZŠ - Strieborné nám. - Rooseveltova nem. a späť",
+    "shortName": "80",
+    "validFrom": "2025-02-12T11:19:59.000Z",
+    "validTo": "2026-02-20T12:36:10.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009087",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Pieninská - Karpatská - Strieborné nám. - Krematórium a späť",
+    "shortName": "90",
+    "validFrom": "2025-02-12T11:47:08.000Z",
+    "validTo": "2026-02-20T12:36:29.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009088",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Orange - Námestie slobody - Okružná - Pršianska terasa Mosadzná",
+    "shortName": "97",
+    "validFrom": "2025-02-12T11:16:42.000Z",
+    "validTo": "2026-02-20T12:36:16.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009089",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Západ, Tepličky-Námestie SNP-Zlatý Potok, konečná",
+    "shortName": "1",
+    "validFrom": "2025-02-13T04:01:31.000Z",
+    "validTo": "2025-07-02T06:22:21.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009091",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Rooseveltova nemocnica a späť",
+    "shortName": "1",
+    "validFrom": "2025-03-04T10:36:55.000Z",
+    "validTo": "2026-02-20T12:38:06.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009098",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Autobusová/Žel.stanica-Námestie SNP-Sekier, Dom dôchodcov-Sekier, hájovňa",
+    "shortName": "2",
+    "validFrom": "2025-02-13T03:58:27.000Z",
+    "validTo": "2025-07-02T13:34:11.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009099",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Železničná stanica a späť",
+    "shortName": "2",
+    "validFrom": "2025-07-09T08:20:55.000Z",
+    "validTo": "2026-02-20T12:37:28.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009102",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Rooseveltova nemocnica a späť",
+    "shortName": "3",
+    "validFrom": "2025-01-16T22:27:34.000Z",
+    "validTo": "2025-05-21T21:22:25.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009103",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Západ, Tepličky-Gymnázium-Námestie SNP-SPP-Bakova Jama",
+    "shortName": "3",
+    "validFrom": "2025-06-23T02:41:29.000Z",
+    "validTo": "2025-07-02T12:48:10.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009104",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Podborová-Námestie SNP-Autobusová/Žel.stanica-Zlatý Potok, konečná",
+    "shortName": "4",
+    "validFrom": "2024-12-31T12:36:38.000Z",
+    "validTo": "2025-07-02T14:56:23.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009105",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "TESCO hypermarket - Železničná stanica a späť",
+    "shortName": "4",
+    "validFrom": "2025-07-09T07:04:30.000Z",
+    "validTo": "2026-02-20T12:35:40.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009107",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Podborová-Námestie SNP-Lipovec-Sekier, Dom dôchodcov",
+    "shortName": "5",
+    "validFrom": "2025-01-16T12:28:45.000Z",
+    "validTo": "2025-07-02T14:53:13.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009110",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Podborová-Námestie SNP-Autobusová/Žel.stanica-Západ Tepličky",
+    "shortName": "6",
+    "validFrom": "2025-01-07T04:53:22.000Z",
+    "validTo": "2025-07-02T12:45:19.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009111",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica  - Tulská a späť",
+    "shortName": "6",
+    "validFrom": "2025-07-04T03:13:27.000Z",
+    "validTo": "2026-02-20T12:37:46.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009112",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Zlatý Potok, konečná-Námestie SNP-Lipovec-Sekier, Dom dôchodcov",
+    "shortName": "7",
+    "validFrom": "2025-01-16T14:41:00.000Z",
+    "validTo": "2025-07-02T14:28:13.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009113",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Žel.stanica - Internátna a späť",
+    "shortName": "7",
+    "validFrom": "2025-07-09T06:14:00.000Z",
+    "validTo": "2026-02-20T12:32:56.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009114",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Zlatý Potok, konečná-Námestie SNP-Autobusová/Žel.stanica-Západ, Tepličky",
+    "shortName": "8",
+    "validFrom": "2025-01-03T04:26:16.000Z",
+    "validTo": "2025-07-02T14:57:56.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009115",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Železničná stanica - Tulská a späť",
+    "shortName": "8",
+    "validFrom": "2025-07-09T04:58:18.000Z",
+    "validTo": "2026-02-20T12:37:33.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009123",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "THK otočka - H.Vajanského-Strieborné nám.-Jesenský vršok-Nám.slobody - Žel.stanica-Senica a späť",
+    "shortName": "33",
+    "validFrom": "2025-06-20T02:32:05.000Z",
+    "validTo": "2026-02-20T12:11:32.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009124",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Senica,otočka - Námestie slobody - Zvolenská cesta - Iliaš II. a späť",
+    "shortName": "41",
+    "validFrom": "2025-06-20T10:43:17.000Z",
+    "validTo": "2026-02-20T12:33:00.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009125",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Majer,otočka - Námestie slobody - Šalková,otočka a späť",
+    "shortName": "42",
+    "validFrom": "2025-06-20T09:50:53.000Z",
+    "validTo": "2026-02-20T12:30:51.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009126",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Rooseveltova nemocnica a späť",
+    "shortName": "3",
+    "validFrom": "2025-06-19T04:28:28.000Z",
+    "validTo": "2026-02-20T12:37:47.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009127",
+    "agency": "Dopravný podnik mesta Banská Bystrica s.r.o.",
+    "color": "",
+    "longName": "TESCO hypermarket - Rooseveltova nem. a späť",
+    "shortName": "5",
+    "validFrom": "2025-07-09T08:19:24.000Z",
+    "validTo": "2026-02-20T12:34:45.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009154",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Rooseveltova nemocnica - Strieborné námestie - Starohorská, otočka a späť",
+    "shortName": "25",
+    "validFrom": "2026-02-10T10:04:40.000Z",
+    "validTo": "2026-05-11T10:37:01.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009156",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Gaštanová - Strieborné námestie - Starohorská, otočka a späť",
+    "shortName": "27",
+    "validFrom": "2026-01-09T05:58:58.000Z",
+    "validTo": "2026-05-11T07:06:25.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009164",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Námestie slobody - Jesenský vršok - Strieborné námestie - Skubín,otočka a späť",
+    "shortName": "35",
+    "validFrom": "2026-02-26T03:32:41.000Z",
+    "validTo": "2026-05-11T10:36:35.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009165",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Námestie slobody - Jesenský vršok - Strieborné námestie - Mlynská, otočka a spä",
+    "shortName": "36",
+    "validFrom": "2026-02-26T03:52:14.000Z",
+    "validTo": "2026-05-11T10:36:31.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009169",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Majer, otočka - Námestie slobody - Šalková, otočka a späť",
+    "shortName": "42",
+    "validFrom": "2026-02-23T12:39:54.000Z",
+    "validTo": "2026-05-11T10:35:34.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009179",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Viestova - Železničná stanica - Ďumbierska ZŠ - Stará Sásová - Strieborné námestie - Rooseveltova ne",
+    "shortName": "80",
+    "validFrom": "2026-01-14T07:50:46.000Z",
+    "validTo": "2026-05-11T10:35:53.000Z",
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009196",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Rooseveltova nemocnica a späť",
+    "shortName": "1",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009204",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "–elezniÉnŠ stanica-Rooseveltova nemocnic",
+    "shortName": "1",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009212",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "–elezniÉnŠ stanica-Rooseveltova nemocnic",
+    "shortName": "1",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009213",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "–elezniÉnŠ stanica-Rooseveltova nemocnic",
+    "shortName": "1",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009218",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Rooseveltova nemocnica a späť",
+    "shortName": "1",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "946000271",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Rooseveltova nemocnica",
+    "shortName": "1",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-19T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009197",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Železničná stanica a späť",
+    "shortName": "2",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009205",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozov?a KremniÉka-–elezniÉnŠ stanic",
+    "shortName": "2",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009219",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Železničná stanica a späť",
+    "shortName": "2",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "946000272",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Železničná stanica",
+    "shortName": "2",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-19T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009217",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Pieninská - Námestie slobody - Autobusová stanica- Majerská cesta a späť",
+    "shortName": "23",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009198",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Rooseveltova nemocnica a späť",
+    "shortName": "3",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009206",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozov?a KremniÉka-Rooseveltova nemocnic",
+    "shortName": "3",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009220",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Rooseveltova nemocnica a späť",
+    "shortName": "3",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "946000273",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Vozovňa Kremnička - Rooseveltova nemocnica",
+    "shortName": "3",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-19T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009226",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Podlavice, Gaštanová - Kyjevské námestie - Zvolenská cesta - Iliaš pri moste a späť",
+    "shortName": "32",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009216",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Námestie slobody - EUROPA SC - Gaštanová a späť",
+    "shortName": "34",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009199",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket - Železničná stanica a späť",
+    "shortName": "4",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009207",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket-–elezniÉnŠ stanic",
+    "shortName": "4",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009221",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket - Železničná stanica a späť",
+    "shortName": "4",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "946000274",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket - Železničná stanica",
+    "shortName": "4",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-19T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009214",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Majer,otočka - Námestie slobody - Šalková,otočka a späť",
+    "shortName": "42",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009200",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket - Rooseveltova nemocnica a späť",
+    "shortName": "5",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009208",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket-Rooseveltova nemocnic",
+    "shortName": "5",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009222",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket - Rooseveltova nemocnica a späť",
+    "shortName": "5",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "946000275",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "TESCO hypermarket - Rooseveltova nemocnica",
+    "shortName": "5",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-19T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009201",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica  - Tulská a späť",
+    "shortName": "6",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009209",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "–elezniÉnŠ stanica-Tulsk",
+    "shortName": "6",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009223",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica  - Tulská a späť",
+    "shortName": "6",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "946000276",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Tulská",
+    "shortName": "6",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-19T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009202",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Internátna a späť",
+    "shortName": "7",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009210",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "–elezniÉnŠ stanica-InternŠtn",
+    "shortName": "7",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009224",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Internátna a späť",
+    "shortName": "7",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "946000277",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Internátna",
+    "shortName": "7",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-19T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009203",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Tulská a späť",
+    "shortName": "8",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009211",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "–elezniÉnŠ stanica-Tulsk",
+    "shortName": "8",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009225",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Tulská a späť",
+    "shortName": "8",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-05T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "946000278",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Železničná stanica - Tulská",
+    "shortName": "8",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": "2026-10-19T22:00:00.000Z",
+    "vehicleType": "Trolleybus"
+  },
+  {
+    "routeId": "910009215",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Viestova - Železničná stanica - Ďumbierska ZŠ - Stará Sásová - Strieborné námestie - Rooseveltova ne",
+    "shortName": "80",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Bus"
+  },
+  {
+    "routeId": "910009227",
+    "agency": "Slovenská autobusová doprava Zvolen a.s.",
+    "color": "",
+    "longName": "Žel. stanica - Nám. slobody - Autobusová stanica - Kyjevské nám. - Sládkovičova - Pršianska terasa,",
+    "shortName": "97",
+    "validFrom": "2026-09-24T22:00:00.000Z",
+    "validTo": null,
+    "vehicleType": "Bus"
+  }
+]
