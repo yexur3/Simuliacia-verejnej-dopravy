@@ -46,10 +46,12 @@ def merge_order(sequences):
             in_order.update(trail)
     return order
 
+MAX_DETOUR = 4
 
-def fill_trip(known, order, cum):
+def fill_trip(known, order, cum, pos):
     """
     known: {stopId: час}. order: спільний порядок. cum: накопичена відстань по order.
+    pos: {stopId: (x, y)}.
     Повертає [(час, stopId), ...] від першої до останньої відомої зупинки.
     """
     idx = {s: i for i, s in enumerate(order)}
@@ -64,6 +66,14 @@ def fill_trip(known, order, cum):
     result = []
     for (i1, t1), (i2, t2) in zip(clean, clean[1:]):
         span = cum[i2] - cum[i1]
+        ax, ay = pos[order[i1]]
+        bx, by = pos[order[i2]]
+        direct = math.hypot(bx - ax, by - ay)
+        if direct > 0 and span > MAX_DETOUR * direct:
+            # Підозрілий об'їзд: не вигадуємо проміжні зупинки,
+            # з'єднуємо дві відомі напряму
+            result.append((t1, order[i1]))
+            continue
         for j in range(i1, i2):
             frac = (cum[j] - cum[i1]) / span if span > 0 else 0
             result.append((t1 + (t2 - t1) * frac, order[j]))
@@ -110,7 +120,7 @@ def build_trips(departures, pos):
             cum.append(cum[-1] + math.hypot(bx - ax, by - ay))
 
         for tid in tids:
-            filled = fill_trip(known_by_trip[tid], order, cum)
+            filled = fill_trip(known_by_trip[tid], order, cum, pos)
             if len(filled) >= 2:
                 trips[tid] = filled
     return trips, trip_type
