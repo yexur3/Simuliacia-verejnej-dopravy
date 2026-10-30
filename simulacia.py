@@ -2,25 +2,22 @@ import bisect
 import json
 import math
 import os
-from datetime import datetime
+from collections import Counter
+from datetime import datetime, timedelta
 from types import SimpleNamespace as NS
 
 import pygame
 
-from reconstruct import build_trips
+from reconstruct import build_trips, trip_completeness
+from typical_day import DAY, make_typical_day
 from routegeom import RouteGeometry
 
 # ====================== Nastavenia vzhľadu ======================
 START_W, START_H = 1280, 900       # počiatočná veľkosť okna (dá sa meniť myšou)
-BG = (13, 15, 20)                # nezávisle sivá, ako vo videu
-
-def lift(c, n):
-    """Svetlejšia verzia farby (na cesty a pod.)."""
-    return tuple(min(255, v + n) for v in c)
-
+BG = (13, 15, 20)
 ROAD_MINOR = (33, 37, 49)          # drobné ulice
 ROAD_MAJOR = (58, 64, 82)          # hlavné cesty
-STOP_COLOR = (95, 100, 120)          # hlavné cesty o niečo výraznejšie
+STOP_COLOR = (95, 100, 120)        # zastávky
 
 TITLE = "Banská Bystrica"
 SUBTITLE = "Verejná doprava"
@@ -47,9 +44,11 @@ DOT_OUTLINE = 1.1                  # hrúbka tmavého obrysu
 DOT_WHITENESS = 0.88               # 0 = farba typu, 1 = biely bod (vo videu sú takmer biele)
 
 START_SPEED = 60                   # sekúnd simulácie za 1 reálnu
+START_HOUR = 9                     # od ktorej hodiny deň začína
+DAY_LABEL = "typický pracovný deň"
+MIN_TRIP_COMPLETENESS = 0.5        # rejsy s menším podielom známych zastávok sa zahodia
 SS = 2                             # vyhladzovanie pozadia (2 = kresliť 2x väčšie)
 HOME_LO, HOME_HI = 0.03, 0.97      # úvodný záber: 3 % - 97 % zastávok (bez vzdialených okrajov)
-
 
 # ====================== Dáta ======================
 with open("stops.json", encoding="utf-8") as f:
@@ -65,11 +64,16 @@ k = math.cos(math.radians(sum(lats) / len(lats)))
 # Metrové súradnice len na zostavenie rejsov (nezávisia od zoomu)
 pos_m = {sid: (lon * 111320 * k, lat * 110540) for sid, (lon, lat) in stop_ll.items()}
 trips, trip_type = build_trips(departures, pos_m)
-print("Rejsov pre simuláciu:", len(trips))
+n_all = len(trips)
+date_counts = Counter(datetime.fromtimestamp(items[0][0]).date() for items in trips.values())
+data_date = date_counts.most_common(1)[0][0]
+START_DATE = datetime.combine(data_date, datetime.min.time())
+completeness = trip_completeness(departures)
+trips, trip_type = make_typical_day(trips, trip_type, completeness, MIN_TRIP_COMPLETENESS)
+print(f"Rejsov: {n_all} nájdených, {len(trips)} použitých v typickom dni")
 trips_times = {tid: [t for t, _ in items] for tid, items in trips.items()}
 
-all_times = [items[0][0] for items in trips.values()] + [items[-1][0] for items in trips.values()]
-t_start, t_end = min(all_times), max(all_times)
+t_start, t_end = 0, DAY            # os času = celý deň 00:00 - 24:00
 
 # Cesty (OpenStreetMap) v "svetových" súradniciach; bbox každej cesty na rýchle vynechanie
 roads_w = []
@@ -225,17 +229,9 @@ def relayout():
         L.dots[key] = make_dot(col, DOT_RADIUS * ui, DOT_OUTLINE * ui)
         L.dots[key + "_legend"] = make_dot(col, 4.0 * ui, 0, 0)
 
-    # Hodiny na časovej osi
-    span = (t_end - t_start) / 3600
-    L.label_step = 1 if span <= 10 else 2 if span <= 20 else 3
-    first = datetime.fromtimestamp(t_start).replace(minute=0, second=0, microsecond=0).timestamp()
-    L.ticks = []
-    i = 0
-    while first + i * 3600 <= t_end:
-        tt = first + i * 3600
-        if tt >= t_start:
-            L.ticks.append((tt, datetime.fromtimestamp(tt).hour))
-        i += 1
+    # Hodiny na časovej osi: celý deň, popis každé 2 hodiny
+    L.label_step = 2
+    L.ticks = [(h * 3600, h) for h in range(0, 25)]
 
 def x_to_time(x):
     frac = (x - L.bar_x0) / (L.bar_x1 - L.bar_x0)
@@ -303,12 +299,20 @@ relayout()
 fit_view(HOME)
 background = rebuild_view()
 
-sim_time = t_start
+sim_time = START_HOUR * 3600
+day_offset = 0
 speed = START_SPEED
 paused_speed = START_SPEED
 dragging_time = False
 drag_map = None                    # (x, y) začiatku ťahania mapy
 pan_dx = pan_dy = 0
+
+def advance(seconds):
+    """Posunie cas simulacie; pri prechode cez polnoc sa meni datum."""
+    global sim_time, day_offset
+    sim_time += seconds
+    day_offset += int(sim_time // DAY)
+    sim_time %= DAY
 
 def apply_pan():
     """Prenesie dočasný posun (v pixeloch) do pohľadu."""
@@ -362,9 +366,9 @@ while running:
                 else:
                     speed = paused_speed
             elif event.key == pygame.K_RIGHT:
-                sim_time = min(sim_time + 600, t_end)
+                advance(600)
             elif event.key == pygame.K_LEFT:
-                sim_time = max(sim_time - 600, t_start)
+                advance(-600)
             elif event.key == pygame.K_r:
                 pan_dx = pan_dy = 0
                 fit_view(HOME)
@@ -398,7 +402,7 @@ while running:
         background = rebuild_view()
 
     if not dragging_time:
-        sim_time = min(sim_time + dt * speed, t_end)
+        advance(dt * speed)
 
     # ---------------- Kreslenie ----------------
     screen.fill(BG)
@@ -432,9 +436,10 @@ while running:
         lx += d.get_width() + txt.get_width() + 34 * L.ui
 
     # Veľké hodiny vpravo
-    now = datetime.fromtimestamp(sim_time)
+    now = datetime(2000, 1, 1) + timedelta(seconds=sim_time)
     blit_text(render(now.strftime("%H:%M"), L.f_clock, (240, 242, 248)), L.W - L.side, 18 * L.ui, "right")
-    blit_text(render(now.strftime("%d.%m.%Y"), L.f_date, (150, 156, 175)), L.W - L.side, 92 * L.ui, "right")
+    shown_date = START_DATE + timedelta(days = day_offset)
+    blit_text(render(shown_date.strftime("%d.%m.%Y"), L.f_date, (150, 156, 175)), L.W - L.side, 92 * L.ui, "right")
     speed_txt = "pauza" if speed == 0 else f"rýchlosť ×{speed:g}"
     blit_text(render(f"v prevádzke: {active}   ·   {speed_txt}", L.f_small, (120, 126, 145)),
               L.W - L.side, 122 * L.ui, "right")

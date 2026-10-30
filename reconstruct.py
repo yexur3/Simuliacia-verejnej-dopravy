@@ -47,11 +47,12 @@ def merge_order(sequences):
     return order
 
 MAX_DETOUR = 4
+MAX_SPEED = 70 / 3.6
 
 def fill_trip(known, order, cum, pos):
     """
     known: {stopId: час}. order: спільний порядок. cum: накопичена відстань по order.
-    pos: {stopId: (x, y)}.
+    pos: {stopId: (x, y)} у МЕТРАХ (потрібно для перевірки швидкості).
     Повертає [(час, stopId), ...] від першої до останньої відомої зупинки.
     """
     idx = {s: i for i, s in enumerate(order)}
@@ -69,9 +70,12 @@ def fill_trip(known, order, cum, pos):
         ax, ay = pos[order[i1]]
         bx, by = pos[order[i2]]
         direct = math.hypot(bx - ax, by - ay)
-        if direct > 0 and span > MAX_DETOUR * direct:
-            # Підозрілий об'їзд: не вигадуємо проміжні зупинки,
-            # з'єднуємо дві відомі напряму
+        detour = direct > 0 and span > MAX_DETOUR * direct
+        too_fast = (t2 - t1) <= 0 or span / (t2 - t1) > MAX_SPEED
+        if detour and too_fast:
+            # Об'їзд, який неможливо проїхати за відомий час (збій у порядку зупинок):
+            # не вигадуємо проміжні зупинки, з'єднуємо дві відомі напряму.
+            # Справжня петля (об'їзд, на який вистачає часу) заповнюється як звичайно.
             result.append((t1, order[i1]))
             continue
         for j in range(i1, i2):
@@ -124,3 +128,19 @@ def build_trips(departures, pos):
             if len(filled) >= 2:
                 trips[tid] = filled
     return trips, trip_type
+
+def trip_completeness(departures):
+    """
+    tripId -> частка відомих зупинок (0..1) відносно найповнішого рейсу
+    тієї ж лінії й напрямку. Низьке значення = рейс проїхав, поки збирач не працював.
+    """
+    known = defaultdict(set)
+    group = {}
+    for d in departures.values():
+        if d.get("tripId") and d.get("stopId") and d.get("scheduleTime"):
+            known[d["tripId"]].add(d["stopId"])
+            group[d["tripId"]] = (d.get("routeId"), d.get("direction"))
+    ref = defaultdict(int)
+    for tid, g in group.items():
+        ref[g] = max(ref[g], len(known[tid]))
+    return {tid: min(1.0, len(known[tid]) / ref[group[tid]]) for tid in known}
