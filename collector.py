@@ -35,7 +35,7 @@ while True:
             for dep in (stop.get("departures") or []):
                 if not dep:
                     continue
-                key = f'{dep.get("tripId")}|{stop.get("stopId")}'
+                key = f'{dep.get("tripId")}|{stop.get("stopId")}|{dep.get("scheduleTime")}'
                 if key not in collected:
                     new_count += 1
                 collected[key] = {

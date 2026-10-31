@@ -1,4 +1,5 @@
 import math
+import statistics
 from collections import defaultdict
 from datetime import datetime
 
@@ -46,8 +47,10 @@ def merge_order(sequences):
             in_order.update(trail)
     return order
 
-MAX_DETOUR = 4
-MAX_SPEED = 70 / 3.6
+
+MAX_DETOUR = 4                 # шлях через проміжні зупинки >4x довший за пряму = підозрілий об'їзд
+MAX_SPEED = 70 / 3.6           # м/с: швидше за 70 км/год по такому шляху автобус їхати не міг
+
 
 def fill_trip(known, order, cum, pos):
     """
@@ -86,20 +89,75 @@ def fill_trip(known, order, cum, pos):
     return result
 
 
+RUN_GAP = 4 * 3600   # пауза між двома відомими часами одного tripId довша за це = різні дні
+
+
+def collect_runs(departures, valid_stops=None):
+    """
+    Розбиває записи на окремі проїзди. Один tripId у розкладі повторюється щодня,
+    тож записи з різних днів не можна зливати в один рейс.
+    Повертає (runs, group, vtype): runs[id] = {stopId: час}.
+    """
+    by_trip = defaultdict(list)    # tripId -> [(час, stopId)]
+    meta = {}
+    for d in departures.values():
+        if not (d.get("tripId") and d.get("stopId") and d.get("scheduleTime")):
+            continue
+        if valid_stops is not None and d["stopId"] not in valid_stops:
+            continue
+        by_trip[d["tripId"]].append((to_seconds(d["scheduleTime"]), d["stopId"]))
+        meta[d["tripId"]] = (d.get("routeId"), d.get("direction"), d.get("vehicleType"))
+
+    runs, group, vtype = {}, {}, {}
+    for tid, items in by_trip.items():
+        items.sort()
+        chunks, cur = [], []
+        for t, s in items:
+            if cur and t - cur[-1][0] > RUN_GAP:
+                chunks.append(cur)
+                cur = []
+            cur.append((t, s))
+        chunks.append(cur)
+        for n, chunk in enumerate(chunks):
+            rid = tid if len(chunks) == 1 else f"{tid}#{n}"
+            known = {}
+            for t, s in chunk:
+                known.setdefault(s, t)         # якщо зупинка двічі, лишаємо раніший час
+            runs[rid] = known
+            group[rid] = (meta[tid][0], meta[tid][1])
+            vtype[rid] = meta[tid][2]
+    return runs, group, vtype
+
+
+def extend_run(filled, order, idx, D):
+    """
+    Добудовує рейс до кінцевих зупинок лінії за типовим часом проїзду між сусідніми
+    зупинками (D[i] = секунди від order[i] до order[i+1]). Йдемо лише по тих сусідніх
+    парах, які справді бачили в даних, тож "вигадані" стрибки неможливі.
+    """
+    first_i, last_i = idx[filled[0][1]], idx[filled[-1][1]]
+    out = list(filled)
+    t, j = filled[-1][0], last_i
+    while j + 1 < len(order) and j in D:
+        t += D[j]
+        j += 1
+        out.append((t, order[j]))
+    head = []
+    t, j = filled[0][0], first_i
+    while j - 1 >= 0 and (j - 1) in D:
+        t -= D[j - 1]
+        j -= 1
+        head.append((t, order[j]))
+    return head[::-1] + out
+
+
 def build_trips(departures, pos):
     """
-    departures: словник із departures.json. pos: {stopId: (x, y)}.
+    departures: словник із departures.json. pos: {stopId: (x, y)} у метрах.
     Повертає (trips, trip_type), де trips = {tripId: [(час, stopId), ...]}.
     """
-    # 1. tripId -> {stopId: час}, і до якої лінії/напрямку належить рейс
-    known_by_trip = defaultdict(dict)
-    trip_group = {}
-    trip_type = {}
-    for d in departures.values():
-        if d["stopId"] in pos and d["scheduleTime"] and d["tripId"]:
-            known_by_trip[d["tripId"]][d["stopId"]] = to_seconds(d["scheduleTime"])
-            trip_group[d["tripId"]] = (d["routeId"], d["direction"])
-            trip_type[d["tripId"]] = d["vehicleType"]
+    # 1. Проїзди: run id -> {stopId: час}; той самий tripId з різних днів не зливаємо
+    known_by_trip, trip_group, trip_type = collect_runs(departures, set(pos))
 
     # 2. Групуємо рейси за лінією і напрямком
     groups = defaultdict(list)
@@ -108,7 +166,7 @@ def build_trips(departures, pos):
 
     trips = {}
     for group, tids in groups.items():
-        # найдовший (за кількістю відомих зупинок) рейс першим
+        # рейси цієї групи, найдовший (за кількістю відомих зупинок) перший
         tids.sort(key=lambda t: len(known_by_trip[t]), reverse=True)
         seqs = []
         for tid in tids:
@@ -123,24 +181,30 @@ def build_trips(departures, pos):
             bx, by = pos[b]
             cum.append(cum[-1] + math.hypot(bx - ax, by - ay))
 
+        # Типові тривалості між сусідніми зупинками порядку (медіана по рейсах лінії)
+        idx = {s: i for i, s in enumerate(order)}
+        durations = defaultdict(list)
+        for tid in tids:
+            pts = sorted((idx[s], t) for s, t in known_by_trip[tid].items() if s in idx)
+            for (i1, t1), (i2, t2) in zip(pts, pts[1:]):
+                if i2 == i1 + 1 and 0 < t2 - t1 < 1800:
+                    durations[i1].append(t2 - t1)
+        D = {i: statistics.median(v) for i, v in durations.items()}
+
         for tid in tids:
             filled = fill_trip(known_by_trip[tid], order, cum, pos)
             if len(filled) >= 2:
-                trips[tid] = filled
+                trips[tid] = extend_run(filled, order, idx, D)
     return trips, trip_type
+
 
 def trip_completeness(departures):
     """
-    tripId -> частка відомих зупинок (0..1) відносно найповнішого рейсу
+    run id -> частка відомих зупинок (0..1) відносно найповнішого рейсу
     тієї ж лінії й напрямку. Низьке значення = рейс проїхав, поки збирач не працював.
     """
-    known = defaultdict(set)
-    group = {}
-    for d in departures.values():
-        if d.get("tripId") and d.get("stopId") and d.get("scheduleTime"):
-            known[d["tripId"]].add(d["stopId"])
-            group[d["tripId"]] = (d.get("routeId"), d.get("direction"))
+    runs, group, _ = collect_runs(departures)
     ref = defaultdict(int)
-    for tid, g in group.items():
-        ref[g] = max(ref[g], len(known[tid]))
-    return {tid: min(1.0, len(known[tid]) / ref[group[tid]]) for tid in known}
+    for rid, g in group.items():
+        ref[g] = max(ref[g], len(runs[rid]))
+    return {rid: min(1.0, len(runs[rid]) / ref[group[rid]]) for rid in runs}

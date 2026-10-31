@@ -44,7 +44,7 @@ total = slow = same_place = long_slow = 0.0
 per_route = defaultdict(lambda: [0.0, 0.0])    # лінія -> [весь час, повільний час]
 rows = []
 for tid, items in trips.items():
-    r = route.get(tid.rstrip("~"), "?")
+    r = route.get(tid.split("#")[0].rstrip("~"), "?")
     for (t1, a), (t2, b) in zip(items, items[1:]):
         dt = t2 - t1
         if dt <= 0 or a == b:

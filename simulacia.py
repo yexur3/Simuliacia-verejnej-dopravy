@@ -1,8 +1,8 @@
 import bisect
 import json
+from collections import Counter
 import math
 import os
-from collections import Counter
 from datetime import datetime, timedelta
 from types import SimpleNamespace as NS
 
@@ -10,6 +10,7 @@ import pygame
 
 from reconstruct import build_trips, trip_completeness
 from typical_day import DAY, make_typical_day
+from feasible import make_seg_length, enforce_speed_limit
 from routegeom import RouteGeometry
 
 # ====================== Nastavenia vzhľadu ======================
@@ -46,7 +47,8 @@ DOT_WHITENESS = 0.88               # 0 = farba typu, 1 = biely bod (vo videu sú
 START_SPEED = 60                   # sekúnd simulácie za 1 reálnu
 START_HOUR = 9                     # od ktorej hodiny deň začína
 DAY_LABEL = "typický pracovný deň"
-MIN_TRIP_COMPLETENESS = 0.5        # rejsy s menším podielom známych zastávok sa zahodia
+MIN_TRIP_COMPLETENESS = 0.3        # rejsy s menším podielom známych zastávok sa zahodia
+MAX_SPEED_KMH = 60                 # rýchlejšie ako toto vozidlo po úseku nejde (meškanie sa potom dobehne)
 SS = 2                             # vyhladzovanie pozadia (2 = kresliť 2x väčšie)
 HOME_LO, HOME_HI = 0.03, 0.97      # úvodný záber: 3 % - 97 % zastávok (bez vzdialených okrajov)
 
@@ -66,9 +68,11 @@ pos_m = {sid: (lon * 111320 * k, lat * 110540) for sid, (lon, lat) in stop_ll.it
 trips, trip_type = build_trips(departures, pos_m)
 n_all = len(trips)
 date_counts = Counter(datetime.fromtimestamp(items[0][0]).date() for items in trips.values())
-data_date = date_counts.most_common(1)[0][0]
-START_DATE = datetime.combine(data_date, datetime.min.time())
+data_date = date_counts.most_common(1)[0][0]                   # deň s najviac rejsmi
+START_DATE = datetime.combine(data_date, datetime.min.time())  # od neho sa počíta dátum
 completeness = trip_completeness(departures)
+seg_length = make_seg_length(stop_ll)
+trips = enforce_speed_limit(trips, seg_length, MAX_SPEED_KMH)
 trips, trip_type = make_typical_day(trips, trip_type, completeness, MIN_TRIP_COMPLETENESS)
 print(f"Rejsov: {n_all} nájdených, {len(trips)} použitých v typickom dni")
 trips_times = {tid: [t for t, _ in items] for tid, items in trips.items()}
@@ -300,7 +304,7 @@ fit_view(HOME)
 background = rebuild_view()
 
 sim_time = START_HOUR * 3600
-day_offset = 0
+day_offset = 0                     # koľký deň po START_DATE práve beží
 speed = START_SPEED
 paused_speed = START_SPEED
 dragging_time = False
@@ -308,7 +312,7 @@ drag_map = None                    # (x, y) začiatku ťahania mapy
 pan_dx = pan_dy = 0
 
 def advance(seconds):
-    """Posunie cas simulacie; pri prechode cez polnoc sa meni datum."""
+    """Posunie čas simulácie; pri prechode cez polnoc sa mení dátum."""
     global sim_time, day_offset
     sim_time += seconds
     day_offset += int(sim_time // DAY)
@@ -438,7 +442,7 @@ while running:
     # Veľké hodiny vpravo
     now = datetime(2000, 1, 1) + timedelta(seconds=sim_time)
     blit_text(render(now.strftime("%H:%M"), L.f_clock, (240, 242, 248)), L.W - L.side, 18 * L.ui, "right")
-    shown_date = START_DATE + timedelta(days = day_offset)
+    shown_date = START_DATE + timedelta(days=day_offset)
     blit_text(render(shown_date.strftime("%d.%m.%Y"), L.f_date, (150, 156, 175)), L.W - L.side, 92 * L.ui, "right")
     speed_txt = "pauza" if speed == 0 else f"rýchlosť ×{speed:g}"
     blit_text(render(f"v prevádzke: {active}   ·   {speed_txt}", L.f_small, (120, 126, 145)),
