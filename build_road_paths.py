@@ -25,7 +25,8 @@ lonlat = {s["stopId"]: tuple(s["position"]["coordinates"]) for s in stops}
 pos_m = {sid: graph.to_xy(*ll) for sid, ll in lonlat.items()}
 
 # Які пари сусідніх зупинок взагалі зустрічаються в рейсах
-trips, _ = build_trips(departures, pos_m)
+names = {s["stopId"]: s["name"] for s in stops}
+trips, _ = build_trips(departures, pos_m, names)
 pairs = set()
 for items in trips.values():
     for (_, a), (_, b) in zip(items, items[1:]):

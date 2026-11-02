@@ -65,7 +65,8 @@ k = math.cos(math.radians(sum(lats) / len(lats)))
 
 # Metrové súradnice len na zostavenie rejsov (nezávisia od zoomu)
 pos_m = {sid: (lon * 111320 * k, lat * 110540) for sid, (lon, lat) in stop_ll.items()}
-trips, trip_type = build_trips(departures, pos_m)
+stop_name = {s["stopId"]: s["name"] for s in stops}
+trips, trip_type = build_trips(departures, pos_m, stop_name)
 n_all = len(trips)
 date_counts = Counter(datetime.fromtimestamp(items[0][0]).date() for items in trips.values())
 data_date = date_counts.most_common(1)[0][0]                   # deň s najviac rejsmi

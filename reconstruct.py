@@ -151,9 +151,11 @@ def extend_run(filled, order, idx, D):
     return head[::-1] + out
 
 
-def build_trips(departures, pos):
+def build_trips(departures, pos, names=None):
     """
     departures: словник із departures.json. pos: {stopId: (x, y)} у метрах.
+    names: {stopId: назва зупинки} (необов'язково). Якщо задано, до лінії добудовується
+    кінцева зупинка за назвою напрямку, бо API не показує зупинку, з якої ніхто не відправляється.
     Повертає (trips, trip_type), де trips = {tripId: [(час, stopId), ...]}.
     """
     # 1. Проїзди: run id -> {stopId: час}; той самий tripId з різних днів не зливаємо
@@ -190,6 +192,25 @@ def build_trips(departures, pos):
                 if i2 == i1 + 1 and 0 < t2 - t1 < 1800:
                     durations[i1].append(t2 - t1)
         D = {i: statistics.median(v) for i, v in durations.items()}
+
+        # Кінцева зупинка: напрямок у даних = назва кінцевої. Якщо серед зупинок лінії її немає,
+        # беремо зупинку з такою назвою, найближчу до останньої, і додаємо в кінець порядку.
+        if names:
+            target = (group[1] or "").strip().lower()
+            if target and not any(names.get(s, "").strip().lower() == target for s in order):
+                cands = [s for s, nm in names.items() if nm.strip().lower() == target and s in pos]
+                if cands:
+                    last = order[-1]
+                    term = min(cands, key=lambda c: math.hypot(pos[c][0] - pos[last][0],
+                                                               pos[c][1] - pos[last][1]))
+                    dist = math.hypot(pos[term][0] - pos[last][0], pos[term][1] - pos[last][1])
+                    speeds = [(cum[i + 1] - cum[i]) / d for i, d in D.items()
+                              if d > 0 and i + 1 < len(cum)]
+                    speed = min(max(statistics.median(speeds), 3.0), 12.0) if speeds else 7.0
+                    order.append(term)
+                    cum.append(cum[-1] + dist)
+                    idx[term] = len(order) - 1
+                    D[len(order) - 2] = max(60.0, dist / speed)
 
         for tid in tids:
             filled = fill_trip(known_by_trip[tid], order, cum, pos)
